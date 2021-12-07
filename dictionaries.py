@@ -1,5 +1,8 @@
-def user_profile(**details):
+def user_profile(country, **details):
     """display user's profile"""
-    for k,v in details.items():
-        print(f"{k}: {v}".title())
-user_profile(name="abasiubong",surname="effiong",occupation="lawyer",city="abuja")
+    details["country"] = country
+    return details
+    # for k,v in details.items():
+    #     print(f"{k}: {v}".title())
+profile = user_profile("Nigeria", name="abasiubong",surname="effiong",occupation="lawyer",city="abuja")
+print (profile)
